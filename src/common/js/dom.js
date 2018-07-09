@@ -6,7 +6,7 @@ export function addClass(el, className){
 	newClass.push(className);
 	el.className = newClass.join(' ')
 }
-getData
+
 export function hasClass(el, className){
 	let reg = new RegExp('(^|\\s)'+ className + '(\\s|$)')
 	return reg.test(el.className);
