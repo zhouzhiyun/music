@@ -100,7 +100,7 @@
       Confirm,
       Suggest
     }
-  }
+  };
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">

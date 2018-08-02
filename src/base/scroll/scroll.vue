@@ -26,7 +26,12 @@
 			pullup:{
 				type:Boolean,
 				default:false
+			},
+			beforeScroll:{
+				type:Boolean,
+				default:false
 			}
+
 		},
 		mounted(){
 			setTimeout(() => {
@@ -54,6 +59,11 @@
 							this.$emit('scrollToEnd')//滚动到底部
 						}
 					});
+				}
+				if(this.beforeScroll){
+					this.scroll.on('beforeScrollStart',()=>{
+						this.$emit('beforeScroll')
+					})
 				}
 			},
 			enable() {

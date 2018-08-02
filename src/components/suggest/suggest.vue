@@ -68,6 +68,7 @@
         this.$refs.suggest.scrollTo(0, 0)
         search(this.query, this.page, this.showSinger, perpage).then((res) => {
           if (res.code === ERR_OK) {
+            console.log(res)
             this.result = this._genResult(res.data)
             this._checkMore(res.data)
           }
@@ -119,6 +120,7 @@
       },
       _genResult(data) {
         let ret = []
+        console.log(data);
         if (data.zhida && data.zhida.singerid) {
           ret.push({...data.zhida, ...{type: TYPE_SINGER}})
         }
